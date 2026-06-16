@@ -115,8 +115,8 @@ importers:
         specifier: ^4.1.8
         version: 4.1.8(vitest@4.1.8)
       astro:
-        specifier: ^6.4.4
-        version: 6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
+        specifier: ^6.4.6
+        version: 6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       esbuild:
         specifier: ^0.28.1
         version: 0.28.1
@@ -241,10 +241,10 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^6.0.2
-        version: 6.0.2(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))
+        version: 6.0.2(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))
       '@astrojs/node':
         specifier: ^10.1.3
-        version: 10.1.3(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))
+        version: 10.1.3(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))
       '@astrojs/rss':
         specifier: ^4.0.18
         version: 4.0.18
@@ -253,10 +253,10 @@ importers:
         version: 3.7.3
       '@astrojs/vue':
         specifier: ^6.0.1
-        version: 6.0.1(@types/node@25.9.2)(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)
+        version: 6.0.1(@types/node@25.9.2)(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)
       astro:
-        specifier: ^6.4.4
-        version: 6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
+        specifier: ^6.4.6
+        version: 6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       vue:
         specifier: ^3.5.35
         version: 3.5.35(typescript@6.0.3)
@@ -945,8 +945,8 @@ packages:
       commander:
         optional: true
 
-  '@capsizecss/unpack@4.0.0':
-    resolution: {integrity: sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==}
+  '@capsizecss/unpack@4.0.1':
+    resolution: {integrity: sha512-CuNiSqg7+e1cO/GjffyMOm5Tt2jUF9CWHHnvQ/UkqvtkGfHdgwEC0wpmq7fkN3gxwpRnrAN0WzO3vREKmNolMQ==}
     engines: {node: '>=18'}
 
   '@changesets/apply-release-plan@7.1.1':
@@ -1236,6 +1236,9 @@ packages:
 
   '@emnapi/runtime@1.10.0':
     resolution: {integrity: sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA==}
+
+  '@emnapi/runtime@1.11.1':
+    resolution: {integrity: sha512-vgj7R3y3Wgx24IQaGPA/R6YFXLHVMOZ0uVEyIQPaWs+rd1AzfEMXlAC22FYwO1XkKR6NPsq7mUandH8oIRdZFw==}
 
   '@emnapi/wasi-threads@1.2.1':
     resolution: {integrity: sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w==}
@@ -4744,8 +4747,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@6.4.4:
-    resolution: {integrity: sha512-hVe8tq3lqt/Dr0UyB//yUmQSlHMTU8scTiF/vQddQVahLE4TTaSdH5H0nb7OvRcwo0UmlAO8DWYar4jNaS7H+A==}
+  astro@6.4.6:
+    resolution: {integrity: sha512-48OBTBKR9ctbf+DQxpOuxGl8ebfn59zTuNQMBzptmG/Mi/H8IdfMSbJgGuX1I/4U6g9yazG1p4BHlf4+2hWU4Q==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -7403,6 +7406,10 @@ packages:
 
   obug@2.1.2:
     resolution: {integrity: sha512-AWGB9WFcRXOQs48Z/udjI5ZcZMHXwX8XPByNpOydgcGsDLIzjGizhoMWJyKAWze7AVW/2W1i+/gPX4YtKe5cyg==}
+    engines: {node: '>=12.20.0'}
+
+  obug@2.1.3:
+    resolution: {integrity: sha512-9miFgM2OFba7hB+pRgvtV84pYTBaoTHohvmIgiRt6dRIzbwEOIaNaP+dIlGs2fNFoB0SeISs0Jz5WFVRid6Xyg==}
     engines: {node: '>=12.20.0'}
 
   ofetch@1.5.1:
@@ -10316,13 +10323,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@6.0.2(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))':
+  '@astrojs/mdx@6.0.2(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.0
       '@astrojs/markdown-remark': 7.2.0
       '@mdx-js/mdx': 3.1.1
       acorn: 8.16.0
-      astro: 6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
+      astro: 6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       es-module-lexer: 2.1.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -10336,10 +10343,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@10.1.3(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))':
+  '@astrojs/node@10.1.3(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.0
-      astro: 6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
+      astro: 6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       send: 1.2.1
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -10369,12 +10376,12 @@ snapshots:
       is-wsl: 3.1.1
       which-pm-runs: 1.1.0
 
-  '@astrojs/vue@6.0.1(@types/node@25.9.2)(astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)':
+  '@astrojs/vue@6.0.1(@types/node@25.9.2)(astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)':
     dependencies:
       '@vitejs/plugin-vue': 6.0.7(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))
       '@vitejs/plugin-vue-jsx': 5.1.5(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))
       '@vue/compiler-sfc': 3.5.35
-      astro: 6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
+      astro: 6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       vite: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
       vite-plugin-vue-devtools: 8.1.2(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))
       vue: 3.5.35(typescript@6.0.3)
@@ -10658,7 +10665,7 @@ snapshots:
       cac: 6.7.14
       citty: 0.2.2
 
-  '@capsizecss/unpack@4.0.0':
+  '@capsizecss/unpack@4.0.1':
     dependencies:
       fontkitten: 1.0.3
 
@@ -11404,6 +11411,11 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@emnapi/runtime@1.11.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
   '@emnapi/wasi-threads@1.2.1':
     dependencies:
       tslib: 2.8.1
@@ -11746,7 +11758,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.34.5':
     dependencies:
-      '@emnapi/runtime': 1.10.0
+      '@emnapi/runtime': 1.11.1
     optional: true
 
   '@img/sharp-win32-arm64@0.34.5':
@@ -12011,7 +12023,7 @@ snapshots:
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0(encoding@0.1.13)
       nopt: 8.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       tar: 7.5.16
     transitivePeerDependencies:
       - encoding
@@ -12245,7 +12257,7 @@ snapshots:
 
   '@npmcli/fs@5.0.0':
     dependencies:
-      semver: 7.8.2
+      semver: 7.8.4
 
   '@npmcli/git@7.0.2':
     dependencies:
@@ -12255,7 +12267,7 @@ snapshots:
       lru-cache: 11.5.1
       npm-pick-manifest: 11.0.3
       proc-log: 6.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       which: 6.0.1
 
   '@npmcli/installed-package-contents@4.0.0':
@@ -12272,7 +12284,7 @@ snapshots:
       hosted-git-info: 9.0.3
       json-parse-even-better-errors: 5.0.0
       proc-log: 6.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       spdx-expression-parse: 4.0.0
 
   '@npmcli/promise-spawn@9.0.1':
@@ -12312,7 +12324,7 @@ snapshots:
       perfect-debounce: 2.1.0
       pkg-types: 2.3.1
       scule: 1.3.0
-      semver: 7.8.2
+      semver: 7.8.4
       srvx: 0.11.16
       std-env: 4.1.0
       tinyclip: 0.1.14
@@ -12346,7 +12358,7 @@ snapshots:
       magicast: 0.5.3
       pathe: 2.0.3
       pkg-types: 2.3.1
-      semver: 7.8.2
+      semver: 7.8.4
 
   '@nuxt/devtools@3.2.4(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.1)(jiti@2.7.0)(less@4.4.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))':
     dependencies:
@@ -12373,7 +12385,7 @@ snapshots:
       pathe: 2.0.3
       perfect-debounce: 2.1.0
       pkg-types: 2.3.1
-      semver: 7.8.2
+      semver: 7.8.4
       simple-git: 3.36.0
       sirv: 3.0.2
       structured-clone-es: 2.0.0
@@ -12406,7 +12418,7 @@ snapshots:
       pkg-types: 2.3.1
       rc9: 3.0.1
       scule: 1.3.0
-      semver: 7.8.2
+      semver: 7.8.4
       tinyglobby: 0.2.17
       ufo: 1.6.4
       unctx: 2.5.0
@@ -13239,7 +13251,7 @@ snapshots:
       es-toolkit: 1.47.0
       filesize: 11.0.17
       fs-extra: 11.3.5
-      semver: 7.8.2
+      semver: 7.8.4
       source-map: 0.7.6
     transitivePeerDependencies:
       - '@emnapi/core'
@@ -14474,13 +14486,13 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.4.4(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0):
+  astro@6.4.6(@netlify/blobs@9.1.2)(@types/node@25.9.2)(db0@0.3.4)(ioredis@5.11.1)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(rollup@4.61.1)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
       '@astrojs/markdown-remark': 7.2.0
       '@astrojs/telemetry': 3.3.2
-      '@capsizecss/unpack': 4.0.0
+      '@capsizecss/unpack': 4.0.1
       '@clack/prompts': 1.5.1
       '@oslojs/encoding': 1.1.0
       '@rollup/pluginutils': 5.4.0(rollup@4.61.1)
@@ -14507,14 +14519,14 @@ snapshots:
       magicast: 0.5.3
       mrmime: 2.0.1
       neotraverse: 0.6.18
-      obug: 2.1.2
+      obug: 2.1.3
       p-limit: 7.3.0
       p-queue: 9.3.0
       package-manager-detector: 1.6.0
       piccolore: 0.1.3
       picomatch: 4.0.4
       rehype: 13.0.2
-      semver: 7.8.2
+      semver: 7.8.4
       shiki: 4.2.0
       smol-toml: 1.6.1
       svgo: 4.0.1
@@ -16994,7 +17006,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.8.2
+      semver: 7.8.4
 
   make-fetch-happen@15.0.6:
     dependencies:
@@ -17718,7 +17730,7 @@ snapshots:
       rollup: 4.61.1
       rollup-plugin-visualizer: 7.0.1(rolldown@1.1.0)(rollup@4.61.1)
       scule: 1.3.0
-      semver: 7.8.2
+      semver: 7.8.4
       serve-placeholder: 2.0.2
       serve-static: 2.2.1
       source-map: 0.7.6
@@ -17811,7 +17823,7 @@ snapshots:
       graceful-fs: 4.2.11
       nopt: 9.0.0
       proc-log: 6.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       tar: 7.5.16
       tinyglobby: 0.2.17
       undici: 6.26.0
@@ -17839,7 +17851,7 @@ snapshots:
 
   npm-install-checks@8.0.0:
     dependencies:
-      semver: 7.8.2
+      semver: 7.8.4
 
   npm-normalize-package-bin@5.0.0: {}
 
@@ -17847,7 +17859,7 @@ snapshots:
     dependencies:
       hosted-git-info: 9.0.3
       proc-log: 6.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       validate-npm-package-name: 7.0.2
 
   npm-packlist@10.0.4:
@@ -17860,7 +17872,7 @@ snapshots:
       npm-install-checks: 8.0.0
       npm-normalize-package-bin: 5.0.0
       npm-package-arg: 13.0.2
-      semver: 7.8.2
+      semver: 7.8.4
 
   npm-registry-fetch@19.1.1:
     dependencies:
@@ -18028,6 +18040,8 @@ snapshots:
   object-inspect@1.13.4: {}
 
   obug@2.1.2: {}
+
+  obug@2.1.3: {}
 
   ofetch@1.5.1:
     dependencies:
@@ -19479,8 +19493,7 @@ snapshots:
 
   semver@7.8.2: {}
 
-  semver@7.8.4:
-    optional: true
+  semver@7.8.4: {}
 
   send@1.2.1:
     dependencies:
@@ -19529,7 +19542,7 @@ snapshots:
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
-      semver: 7.8.2
+      semver: 7.8.4
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.5
       '@img/sharp-darwin-x64': 0.34.5
@@ -20381,7 +20394,7 @@ snapshots:
     dependencies:
       cac: 6.7.14
       es-module-lexer: 2.1.0
-      obug: 2.1.2
+      obug: 2.1.3
       pathe: 2.0.3
       vite: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.0)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.48.0)(yaml@2.9.0)
     transitivePeerDependencies:
@@ -20416,7 +20429,7 @@ snapshots:
     dependencies:
       ansis: 4.3.1
       error-stack-parser-es: 1.0.5
-      obug: 2.1.2
+      obug: 2.1.3
       ohash: 2.0.11
       open: 11.0.0
       perfect-debounce: 2.1.0
@@ -20431,7 +20444,7 @@ snapshots:
     dependencies:
       ansis: 4.3.1
       error-stack-parser-es: 1.0.5
-      obug: 2.1.2
+      obug: 2.1.3
       ohash: 2.0.11
       open: 11.0.0
       perfect-debounce: 2.1.0
