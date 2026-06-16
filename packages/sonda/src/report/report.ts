@@ -127,8 +127,8 @@ export class Report {
 
 	async generate(): Promise<Array<string>> {
 		Object.entries(this.assets)
-			.filter(([_, entrypoints]) => !!entrypoints)
-			.forEach(([path, entrypoints]) => updateOutput(this, path, entrypoints!));
+			.filter(([_, entrypoints]) => entrypoints !== undefined)
+			.forEach(([path, entrypoints]) => updateOutput(this, path, entrypoints));
 
 		this.dependencies = updateDependencies(this);
 

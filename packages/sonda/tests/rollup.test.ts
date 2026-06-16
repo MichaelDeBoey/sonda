@@ -3,6 +3,8 @@ import { rollup } from 'rollup';
 import { resolve, join } from 'path';
 import { readFileSync } from 'fs';
 import { SondaRollupPlugin } from '../src/integrations/rollup.js';
+import { Config } from '../src/config.js';
+import { Report } from '../src/report/report.js';
 import { version } from '../package.json' with { type: 'json' };
 
 const mockConsoleInfo = vi.spyOn(console, 'info').mockImplementation(() => {});
@@ -151,6 +153,8 @@ describe('SondaRollupPlugin', () => {
 		await bundle.write({
 			format: 'es',
 			dir: toOutputDir('rollup_dynamic'),
+			chunkFileNames: '[name].js',
+			entryFileNames: '[name].js',
 			sourcemap: true
 		});
 
@@ -174,6 +178,49 @@ describe('SondaRollupPlugin', () => {
 			target: 'tests/fixtures/dynamic/lazy.js',
 			original: './lazy.js'
 		});
+
+		const { resources } = getReport();
+
+		expect(resources).toEqual(
+			expect.arrayContaining([
+				{
+					brotli: 0,
+					gzip: 0,
+					kind: 'asset',
+					name: 'tests/dist/rollup_dynamic/lazy.js',
+					type: 'script',
+					uncompressed: 74
+				},
+				{
+					brotli: 0,
+					format: 'esm',
+					gzip: 0,
+					kind: 'chunk',
+					name: 'tests/fixtures/dynamic/lazy.js',
+					parent: 'tests/dist/rollup_dynamic/lazy.js',
+					type: 'script',
+					uncompressed: 22
+				}
+			])
+		);
+	});
+
+	it('should ignore collected assets that do not exist on disk', async () => {
+		const report = new Report(
+			new Config(
+				{
+					open: false,
+					format: 'json',
+					outputDir: toOutputDir()
+				},
+				{ integration: 'rollup' }
+			)
+		);
+
+		report.addAsset(toOutputDir('missing/chunk.js'), []);
+
+		await expect(report.generate()).resolves.toEqual([toOutputDir('sonda_0.json')]);
+		expect(getReport().resources).toEqual([]);
 	});
 
 	it('should generate correct report for detailed fixture', async () => {
