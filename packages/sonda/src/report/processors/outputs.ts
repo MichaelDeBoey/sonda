@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { loadCodeAndMap } from 'load-source-map';
 import { default as remapping, type DecodedSourceMap, type EncodedSourceMap } from '@jridgewell/remapping';
 import { Report } from '../report.js';
@@ -18,6 +18,10 @@ const parentMap: Record<string, string> = {};
  * Update the report with the output assets and their sources from the source map.
  */
 export function updateOutput(report: Report, path: string, entrypoints: Array<string> | undefined): void {
+	if (!existsSync(path)) {
+		return;
+	}
+
 	const type = getTypeByName(path);
 
 	RESOURCE_TYPES_TO_ANALYZE.includes(type)

@@ -89,7 +89,7 @@ export function SondaRollupPlugin(userOptions: UserOptions = {}): Plugin {
 			for (const [path, asset] of Object.entries(bundle)) {
 				report.addAsset(
 					resolve(outputDir, path),
-					asset.type === 'chunk' && asset.facadeModuleId ? [asset.facadeModuleId] : undefined
+					asset.type === 'chunk' ? (asset.facadeModuleId ? [asset.facadeModuleId] : []) : undefined
 				);
 			}
 		},
