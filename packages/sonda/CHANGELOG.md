@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.1
+
+### Patch Changes
+
+- 6e692b5: Fixed missing lazy-loaded JavaScript files in reports for SvelteKit and other Vite-based builds.
+
 ## 0.13.0
 
 ### Minor Changes
