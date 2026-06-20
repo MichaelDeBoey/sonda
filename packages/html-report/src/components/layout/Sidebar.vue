@@ -73,7 +73,7 @@ import IconWorkflow from '@icon/Workflow.vue';
 import IconBoxes from '@icon/Boxes.vue';
 import IconFileInput from '@icon/FileInput.vue';
 import IconShare2 from '@icon/Share2.vue';
-// import IconCircleAlert from '@icon/CircleAlert.vue';
+import IconCircleAlert from '@icon/CircleAlert.vue';
 
 interface Link {
 	title: string;
@@ -115,14 +115,12 @@ const items = computed<Array<Link>>(() => [
 		link: 'dependencies',
 		icon: IconShare2,
 		count: Object.values(report.value!.dependencies).length
-	}
-	/*
+	},
 	{
 		title: 'Issues',
 		link: 'issues',
 		icon: IconCircleAlert,
-		count: report.issues.length
+		count: report.value!.issues.length
 	}
-	*/
 ]);
 </script>

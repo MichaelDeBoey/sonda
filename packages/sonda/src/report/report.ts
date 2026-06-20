@@ -6,6 +6,7 @@ import { HtmlFormatter } from './formatters/HtmlFormatter.js';
 import { JsonFormatter } from './formatters/JsonFormatter.js';
 import { updateOutput } from './processors/outputs.js';
 import { updateDependencies } from './processors/dependencies.js';
+import { updateIssues } from './processors/issues.js';
 import type {
 	JsonReport,
 	Metadata,
@@ -131,6 +132,7 @@ export class Report {
 			.forEach(([path, entrypoints]) => updateOutput(this, path, entrypoints));
 
 		this.dependencies = updateDependencies(this);
+		this.issues = updateIssues(this.dependencies);
 
 		const outputs = [];
 
@@ -166,7 +168,7 @@ export class Report {
 			resources: sortByKey(this.resources, 'name'),
 			connections: this.connections,
 			dependencies: sortByKey(this.dependencies, 'name'),
-			issues: this.issues,
+			issues: sortByKey(this.issues, 'message'),
 			sourcemaps: this.sourcemaps
 		};
 	}
