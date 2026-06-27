@@ -16,11 +16,26 @@
 			No issues detected.
 		</div>
 
-		<DataTable
+		<div
 			v-else
+			class="mb-4 flex gap-2"
+		>
+			<Dropdown
+				v-model="types"
+				:options="availableTypeOptions"
+				title="Type"
+			>
+				<template #icon>
+					<IconFunnel :size="16" />
+				</template>
+			</Dropdown>
+		</div>
+
+		<DataTable
+			v-if="issues.length"
 			v-model="active"
 			:columns="COLUMNS"
-			:data="issues"
+			:data="filteredIssues"
 			id="id"
 		>
 			<template #row="{ item }">
@@ -54,10 +69,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
+import { router } from '@/router.js';
 import { report } from '@/report.js';
 import DataTable, { type Column } from '@components/common/DataTable.vue';
+import Dropdown, { type DropdownOption } from '@components/common/Dropdown.vue';
 import IconCircleAlert from '@icon/CircleAlert.vue';
+import IconFunnel from '@components/icon/Funnel.vue';
 import type { Issue, IssueSeverity } from 'sonda';
 
 interface Item extends Issue {
@@ -70,9 +88,23 @@ const COLUMNS: Array<Column<Item>> = [
 ];
 
 const active = ref('');
+const types = computed(router.computedQuery('types', [] as Array<string>));
 const issues = computed<Array<Item>>(() =>
 	report.value!.issues.map((issue, index) => ({ ...issue, id: String(index) }))
 );
+const availableTypeOptions = computed<Array<DropdownOption>>(() => {
+	const issueTypes = issues.value.map(issue => issue.type).toSorted();
+	const uniqueTypes = issueTypes.filter((type, index) => type !== issueTypes[index - 1]);
+
+	return uniqueTypes.map(type => ({ label: formatIssueType(type), value: type }));
+});
+const filteredIssues = computed(() => {
+	return issues.value.filter(issue => !types.value.length || types.value.includes(issue.type));
+});
+
+watch(types, () => {
+	active.value = '';
+});
 
 function getSeverityClass(severity: IssueSeverity): string {
 	return {
@@ -80,6 +112,13 @@ function getSeverityClass(severity: IssueSeverity): string {
 		warning: 'text-amber-500',
 		error: 'text-red-500'
 	}[severity];
+}
+
+function formatIssueType(type: string): string {
+	return type
+		.split('-')
+		.map(part => part.charAt(0).toUpperCase() + part.slice(1))
+		.join(' ');
 }
 
 function formatIssueData(data: unknown): string {

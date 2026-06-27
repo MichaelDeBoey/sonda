@@ -132,7 +132,7 @@ export class Report {
 			.forEach(([path, entrypoints]) => updateOutput(this, path, entrypoints));
 
 		this.dependencies = updateDependencies(this);
-		this.issues = updateIssues(this.dependencies);
+		this.issues = updateIssues(this.dependencies, this.connections);
 
 		const outputs = [];
 
