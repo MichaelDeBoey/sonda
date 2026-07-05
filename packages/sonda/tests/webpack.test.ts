@@ -90,7 +90,7 @@ describe('SondaWebpackPlugin', () => {
 					kind: 'asset',
 					name: 'tests/dist/webpack_1.js',
 					type: 'script',
-					uncompressed: 620
+					uncompressed: 801
 				},
 				{
 					format: 'esm',
@@ -132,7 +132,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/bootstrap',
 					parent: null,
 					type: 'other',
-					uncompressed: 52
+					uncompressed: 54
 				},
 				{
 					brotli: 0,
@@ -142,7 +142,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/bootstrap',
 					parent: 'tests/dist/webpack_1.js',
 					type: 'other',
-					uncompressed: 7
+					uncompressed: 9
 				},
 				{
 					format: 'other',
@@ -150,7 +150,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/runtime/define property getters',
 					parent: null,
 					type: 'other',
-					uncompressed: 308
+					uncompressed: 771
 				},
 				{
 					brotli: 0,
@@ -160,7 +160,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/runtime/define property getters',
 					parent: 'tests/dist/webpack_1.js',
 					type: 'other',
-					uncompressed: 99
+					uncompressed: 302
 				},
 				{
 					format: 'other',
@@ -186,7 +186,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/runtime/make namespace object',
 					parent: null,
 					type: 'other',
-					uncompressed: 274
+					uncompressed: 241
 				},
 				{
 					brotli: 0,
@@ -196,7 +196,7 @@ describe('SondaWebpackPlugin', () => {
 					name: 'webpack/runtime/make namespace object',
 					parent: 'tests/dist/webpack_1.js',
 					type: 'other',
-					uncompressed: 171
+					uncompressed: 147
 				}
 			],
 			connections: [
