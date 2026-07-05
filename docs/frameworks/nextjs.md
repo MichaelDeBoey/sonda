@@ -51,6 +51,10 @@ export default withSondaAnalyzer( config ); // [!code focus]
 
 Now, every time you build your project, Sonda will generate a report with information about your bundles.
 
+::: warning ⚠️ Turbopack support
+Recent Next.js versions use Turbopack by default, which does not support the webpack plugin API that Sonda relies on. To use Sonda, configure your build script to run `next build --webpack`.
+:::
+
 Sonda requires source maps to function correctly, but some other plugins may not support or generate them by default. If Sonda does not work as expected, check the documentation for the other plugins you are using to ensure source maps are enabled.
 
 ### Configure the plugin
