@@ -17,6 +17,7 @@ export type {
 	Connection,
 	Dependency,
 	Issue,
+	IssueSeverity,
 	Resource,
 	Sizes,
 	ResourceKind,

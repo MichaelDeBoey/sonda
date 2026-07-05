@@ -254,8 +254,12 @@ export interface Dependency {
 
 export interface Issue {
 	type: string;
-	data: unknown;
+	severity: IssueSeverity;
+	message: string;
+	data?: unknown;
 }
+
+export type IssueSeverity = 'info' | 'warning' | 'error';
 
 /**
  * All types of resources.

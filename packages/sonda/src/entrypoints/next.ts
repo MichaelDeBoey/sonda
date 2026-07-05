@@ -1,5 +1,8 @@
+import { styleText } from 'util';
 import { SondaWebpackPlugin, Config, type UserOptions } from 'sonda';
 import type { NextConfig } from 'next';
+
+let turbopackWarningShown = false;
 
 export default function SondaNextPlugin(userOptions: UserOptions = {}) {
 	return function Sonda(nextConfig: NextConfig = {}): NextConfig {
@@ -11,6 +14,8 @@ export default function SondaNextPlugin(userOptions: UserOptions = {}) {
 		if (!options.enabled) {
 			return nextConfig;
 		}
+
+		warnIfTurbopackIsUsed();
 
 		return Object.assign({}, nextConfig, {
 			webpack(config, { nextRuntime, isServer }) {
@@ -39,4 +44,21 @@ export default function SondaNextPlugin(userOptions: UserOptions = {}) {
 			}
 		} satisfies NextConfig);
 	};
+}
+
+function warnIfTurbopackIsUsed(): void {
+	const args = process.argv.slice(2);
+
+	if (turbopackWarningShown || !args.includes('build') || args.includes('--webpack')) {
+		return;
+	}
+
+	turbopackWarningShown = true;
+
+	console.warn(
+		styleText(
+			'red',
+			'Sonda does not support Next.js builds with Turbopack yet. Run `next build --webpack` to generate Sonda reports.'
+		)
+	);
 }

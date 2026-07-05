@@ -58,10 +58,6 @@ Now, every time you build your project, Sonda will generate a report with inform
 
 Sonda requires source maps to function correctly, but some other plugins may not support or generate them by default. If Sonda does not work as expected, check the documentation for the other plugins you are using to ensure source maps are enabled.
 
-::: warning ⚠️ Rolldown plugin
-Currently, Sonda reports for Rolldown incorrectly display CommonJS modules as ES modules. This is a known limitation and is being tracked in this [GitHub issue](https://github.com/rolldown/rolldown/issues/3002).
-:::
-
 ### Configure the plugin
 
 The steps above will allow you to generate your first report. However, if the report does not contain the information you need, refer to the [Configuration](/configuration) page to explore additional options and learn how to enable them.
