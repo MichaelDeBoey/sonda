@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.14.0
+
+### Minor Changes
+
+- c2bff35: Add warnings about circular imports.
+- db98c29: Add warnings about duplicated dependencies.
+
+### Patch Changes
+
+- 8bebd30: Print a warning when using Sonda in a Next.js project that builds with Turbopack.
+- 4fb2b99: Fixed `dependencies` entries to ignore package paths that do not exist on disk.
+
 ## 0.13.1
 
 ### Patch Changes
