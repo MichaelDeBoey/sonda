@@ -1,3 +1,4 @@
+import { existsSync } from 'fs';
 import type { Report } from '../report.js';
 import type { Dependency } from '../types.js';
 
@@ -14,6 +15,10 @@ export function updateDependencies(report: Report): Array<Dependency> {
 		.map(file => packageNameRegExp.exec(file.name))
 		.filter(match => match !== null)
 		.forEach(([path, , name]) => {
+			if (!existsSync(path)) {
+				return;
+			}
+
 			const paths = (dependencies[name] ??= []);
 
 			if (!paths.includes(path)) {

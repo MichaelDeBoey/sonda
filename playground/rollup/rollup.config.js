@@ -20,7 +20,7 @@ export default defineConfig({
 	],
 	plugins: [
 		Sonda({
-			format: ['html', 'json']
+			format: 'html'
 		}),
 		styles({
 			mode: 'extract',
