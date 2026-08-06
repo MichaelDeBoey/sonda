@@ -6,6 +6,7 @@ export default function SondaAstroPlugin(userOptions: UserOptions = {}): AstroIn
 		integration: 'astro',
 		filename: 'sonda_[env]_[index]'
 	});
+	let buildOutput: 'static' | 'server';
 
 	if (!options.enabled) {
 		return { name: 'sonda/astro', hooks: {} };
@@ -14,22 +15,36 @@ export default function SondaAstroPlugin(userOptions: UserOptions = {}): AstroIn
 	return {
 		name: 'sonda/astro',
 		hooks: {
-			'astro:build:setup'({ vite, target }) {
-				// Do not generate report for the server build unless explicitly enabled
-				if (target === 'server' && !options.server) {
-					return;
-				}
+			'astro:config:done'({ buildOutput: output }) {
+				buildOutput = output;
+			},
 
-				// Because this configuration is shared between multiple builds, we need to clone it
-				const sondaOptions = options.clone();
+			'astro:build:setup'({ updateConfig }) {
+				updateConfig({
+					plugins: [
+						{
+							name: 'sonda/astro',
+							applyToEnvironment(environment) {
+								const isClient = environment.name === 'client';
+								const isServer = environment.name === 'ssr' && buildOutput === 'server' && options.server;
 
-				// Replace the "[env]" token with the current build type
-				sondaOptions.filename = sondaOptions.filename!.replace('[env]', target);
+								if (!isClient && !isServer) {
+									return false;
+								}
 
-				vite.plugins ??= [];
-				vite.plugins.push({
-					...SondaVitePlugin(sondaOptions),
-					name: 'sonda/astro'
+								// Because this configuration is shared between multiple builds, we need to clone it
+								const sondaOptions = options.clone();
+
+								// Replace the "[env]" token with the current build type
+								sondaOptions.filename = sondaOptions.filename.replace('[env]', isClient ? 'client' : 'server');
+
+								return {
+									...SondaVitePlugin(sondaOptions),
+									name: 'sonda/astro'
+								};
+							}
+						}
+					]
 				});
 			}
 		}
