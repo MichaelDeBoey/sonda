@@ -176,7 +176,7 @@ export interface UserOptions {
 	 * the given file extension (`.html` or `.json`, depending on the `format` option)
 	 * after the build process.
 	 *
-	 * @default false
+	 * @default true
 	 */
 	open?: boolean | Format;
 
