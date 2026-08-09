@@ -7,41 +7,40 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions: {}
+
 jobs:
   release:
     name: Publish packages
     runs-on: ubuntu-latest
+    environment: npm
 
     permissions:
       id-token: write
       contents: write
-      packages: write
       pull-requests: write
-      issues: read
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Enable corepack
-        # https://github.com/nodejs/corepack/issues/627
-        run: npm i -g --force corepack && corepack enable
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          node-version: 22
-          cache: 'pnpm'
+          persist-credentials: false
+
+      - name: Install pnpm and Node.js
+        uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1.0.0
+        with:
+          runtime: node@24
+          cache: false
+          install: false
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create Release Pull Request
-        uses: changesets/action@v1
+      - name: Create release pull request or publish packages
+        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1
         with:
           publish: pnpm run release
           commitMode: github-api
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           PNPM_CONFIG_PROVENANCE: true
